@@ -9,6 +9,13 @@ on:
         default: 'warning'
       tags:
         description: 'Test scenario tags'  
+      choice:
+        type: choice
+        description: Make a choice
+        options:
+        - foo
+        - bar
+        - baz
   schedule:
     - cron: '0 22 * * *' # daily at 22:00
 env:
