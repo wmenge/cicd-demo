@@ -11,11 +11,12 @@ on:
         description: 'Test scenario tags'  
       choice:
         type: choice
-        description: Make a choice
+        description: Migration Type
+        required: true
+        default: 'UPDATE'
         options:
-        - foo
-        - bar
-        - baz
+        - NONE
+        - UPDATE
   schedule:
     - cron: '0 22 * * *' # daily at 22:00
 env:
