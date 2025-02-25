@@ -3,12 +3,6 @@ run-name: Deploy to SAP Commerce Cloud
 on:
   workflow_dispatch:
     inputs:
-      logLevel:
-        description: 'Log level'     
-        required: true
-        default: 'warning'
-      tags:
-        description: 'Test scenario tags'  
       choice:
         type: choice
         description: Migration Type
