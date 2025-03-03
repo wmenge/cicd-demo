@@ -1,5 +1,5 @@
-name: d1-run-e2e-tests
-run-name: Run e2e tests on d1
+name: invalidate-awf-cf-cache
+run-name: Invalidate AWF Cloud Foundry Cache
 on:
   workflow_call:
   workflow_dispatch:
