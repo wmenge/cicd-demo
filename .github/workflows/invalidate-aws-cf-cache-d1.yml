@@ -8,6 +8,3 @@ jobs:
     uses: ./.github/workflows/invalidate-aws-cf-cache.yml
     with:
       distribution: E16HK1VUNDFTYS
-    secrets:
-      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
-      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
