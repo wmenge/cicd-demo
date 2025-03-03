@@ -2,7 +2,15 @@ name: invalidate-awf-cf-cache
 run-name: Invalidate AWF Cloud Foundry Cache
 on:
   workflow_call:
-  workflow_dispatch:
+    inputs:
+      distribution:
+        required: true
+        type: string
+    secrets:
+      AWS_ACCESS_KEY_ID:
+        required: true
+      AWS_SECRET_ACCESS_KEY:
+        required: true
 jobs:
   invalidate-awf-cf-cache:
     runs-on: ubuntu-latest
@@ -15,7 +23,7 @@ jobs:
           fetch-depth: 0
       - id: invalidate_awf_cf_cache
         name: Invalidate AWF Cloud Foundry Cache
-        run: ./.github/scripts/invalidate-awf-cf-cache.sh E16HK1VUNDFTYS
+        run: ./.github/scripts/invalidate-awf-cf-cache.sh ${{ inputs.source }}
         shell: bash
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
