@@ -1,5 +1,5 @@
-name: d1-build-deploy
-run-name: Deploy to SAP Commerce Cloud d1
+name: d1-invalidate-aws-cf-cache
+run-name: Invalidate AWF Cloud Foundry Cache d1
 on:
   workflow_call:
   workflow_dispatch:
