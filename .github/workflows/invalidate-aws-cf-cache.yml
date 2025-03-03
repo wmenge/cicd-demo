@@ -23,7 +23,7 @@ jobs:
           fetch-depth: 0
       - id: invalidate_awf_cf_cache
         name: Invalidate AWF Cloud Foundry Cache
-        run: ./.github/scripts/invalidate-aws-cf-cache.sh ${{ inputs.source }}
+        run: ./.github/scripts/invalidate-aws-cf-cache.sh ${{ inputs.distribution }}
         shell: bash
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
