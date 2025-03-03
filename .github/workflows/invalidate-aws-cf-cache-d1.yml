@@ -1,0 +1,14 @@
+name: d1-invalidate-awf-cf-cache
+run-name: Invalidate AWS Cloud Foundry Cache of d1
+on:
+  workflow_call:
+  workflow_dispatch:
+jobs:
+  invalidate-aws-cf-cache-d1:
+    uses: ./.github/workflows/invalidate-aws-cf-cache.yml
+    with:
+      branch: main
+      distribution: E16HK1VUNDFTYS
+    secrets:
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
